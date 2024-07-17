@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Registers page</h1><br>
+
+<div class="container">
+     <div class="col-md-offset-5 col-md-4">
+          <from action= "" method="POST">
+               {% csrf_token %} <!--It's mandantory in backend a form to get data from UI to DB-->
+          <h3 class="page-header text-primary text-center">Registration</h3>
+          <!--<div class="from-group">
+               <label>Name</label>
+               <input type="text" class="from-control" name="name">
+          </div>
+          <div class="from-group">
+               <label>Regno</label>
+               <input type="text" class="from-control" name="name">
+          </div>-->
+               {{Student_form.as_p}}<br>
+     </div>
+               <input type="submit" value="Register" class="btn btn-success">
+          </from>
+</div><br>
+    
+{% endblock %}
